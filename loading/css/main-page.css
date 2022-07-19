@@ -1,0 +1,580 @@
+<style>
+    .chooseDonation {
+        margin: 00px;
+        font: 14px Tahoma;
+    }
+
+    .chooseDonation div {
+        width: 25%;
+        float: left;
+        color: #FFF;
+
+    }
+
+    .chooseDonation input {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .chooseDonation label {
+        display: block;
+        margin: 0 0 0 -1px;
+        padding: 8px 10px;
+        border: 1px solid #BBBBBB;
+        background: #59BA61;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .12);
+        cursor: pointer;
+    }
+
+    .currency label::after {
+        content: ' ₱'
+    }
+
+    .chooseDonation input:checked+label {
+        background: white;
+        color: #59BA61;
+        /* box-shadow: inset 0 3px 6px rgb(103, 255, 2); */
+    }
+
+    .chooseDonation div:first-child label {
+        margin-left: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .chooseDonation div:last-child label {
+        text-align: center;
+        width: 400%;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .currency div:last-child label::after {
+        content: ''
+    }
+    .yandexsbmt{display: none;}
+ 
+
+</style>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        $("#accordion").accordion({
+            active: false,
+            collapsible: true,
+            heightStyle: "content"
+        });
+    });
+    const qiwiLoaded = () => {
+        qiwiHeader = document.getElementById('qiwiPage').contentWindow.document.querySelector('h1');
+        console.log("🚀 ~ file: Untitled-1 ~ line 70 ~ qiwiLoaded ~ qiwiHeader", qiwiHeader)
+        divLogo = document.createElement('div');
+        divLogo.className = 'logoFund';
+        divLogo.innerHTML =
+            '<img src="/bitrix/templates/innet_focus_s1/img/about-fund-image.png" alt="Логотип преодоления" srcset="">';
+        console.log("🚀 ~ file: Untitled-1 ~ line 73 ~ qiwiLoaded ~ divLogo", divLogo)
+        qiwiHeader.append(divLogo)
+    }
+
+</script>
+<script src="https://widget.cloudpayments.ru/bundles/cloudpayments"></script>
+<div class="container">
+    <div class="row accordion__title-element"
+        style="justify-content: center;border-top: chartreuse 1px solid;border-bottom: chartreuse 1px solid;padding: 3px auto">
+        <!--Заголовок "Платежные системы"-->
+        <h2 cl1ass="accordion__title-element" style="text-align: center;">Платежные системы</h2>
+    </div>
+    <div class="row" style="justify-content: center;">
+      
+        <!--Блоки с платежными системами-->
+        <div class="col col--md-4" style="padding-bottom:30px;">
+            <!--Блок с оплатой Юмани-->
+            <h4>ЮMoney</h4>
+            <div
+                style="box-sizing: border-box; padding: 15px; margin-bottom: 20px; background-color: #F7F6F6;height: 590px;">
+                <br>
+                <br>
+                Вы можете воспользоваться сервисом ЮMoney, перечислив со своей карты <br>
+                <br>
+                <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+                    <input type="hidden" name="receiver" value="410014934987209"> <input type="hidden"
+                        name="formcomment" value=""> <input type="hidden" name="short-dest" value=""> <input
+                        type="hidden" name="label" value="$order_id"> <input type="hidden" name="quickpay-form"
+                        value="donate"> <input type="hidden" name="targets" value="Пожертвование">
+                    <div class="chooseDonation currency">
+                        <div>
+                            <input type="radio" name="summDonate" id="500" value="500"> <label for="500">500</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="summDonate" id="1000" value="1000"> <label for="1000">1
+                                000</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="summDonate" id="3000" value="3000"> <label for="3000">3
+                                000</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="summDonate" id="10000" value="10000"> <label for="10000">10
+                                000</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="summDonate" id="manual" value="manual" checked=""> <label
+                                for="manual">Другая сумма</label>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Сумма: <input type="text" name="sum" required="" value="" data-type="number"
+                        style="max-width:100%; padding:7px;border:1px solid #59BA61; background:#FFF; -webkit-border-radius: 5px; border-radius: 3px;">
+                    рублей. <br>
+                    <br>
+                    <input type="checkbox" name="oferta" id="checkOferta" style=""> 
+                    <label for="checkOferta" style="">Cоглашаюсь с <a href="https://fond68.ru/upload/helpMoney/Dogovor_oferti.pdf" target="_blank" rel="noopener noreferrer">Договором публичной оферты </a></label>
+                    Комментарий: <br>
+                    <textarea name="comment"
+                        style="width:100%; padding:10px; border:1px solid #59BA61; background:#FFF; -webkit-border-radius: 5px; border-radius: 3px; resize: none;"
+                        maxlength="190">Пожертвование на уставные цели фонда. </textarea>
+                    <!--
+<input type="text" name="comment" size="43" value="Пожертвование на уставные цели фонда.">
+--> <br>
+                    <br>
+                    <input type="hidden" name="need-fio" value="true"> <input type="hidden" name="need-email"
+                        value="false"> <input type="hidden" name="need-phone" value="false"> <input type="hidden"
+                        name="need-address" value="false">
+                    <div class="chooseDonation">
+                        <div style="width: 33%;height:52px;text-align: center;">
+                            <input type="radio" name="paymentType" id="5001" value="PC" style="width: 100%;height:100%"
+                                checked=""> <label for="5001" style="width: 100%;height:100%">ЮMoney</label>
+                        </div>
+                        <div style="width: 33%;height:52px;text-align: center;">
+                            <input type="radio" name="paymentType" id="10001" value="AC"
+                                style="width: 100%;height:100%"> <label for="10001"
+                                style="width: 100%;height:100%">Банковской картой</label>
+                        </div>
+                        <div style="width: 33%;height:52px;text-align: center;">
+                            <input type="radio" name="paymentType" id="30001" value="MC"
+                                style="width: 100%;height:100%"> <label for="30001" style="width: 100%;height:100%">С
+                                мобильного счета</label>
+                        </div>
+                       
+                    </div>
+                    <!-- <label><input type="radio" name="paymentType" value="PC" checked=""> ЮMoney</label> <br>
+                  <br>
+                  <label><input type="radio" name="paymentType" value="AC"> Банковской картой</label> <br>
+                  <br>
+                  <label><input type="radio" name="paymentType" value="MC"> С мобильного счета</label> <br> --> <br>
+                    <input type="submit" target="_blank" class="yandexsbmt" value="Пожертвовать"
+                        style="margin-top: 25px;width: 100%; margin-bottom:0px">
+                    <style>
+                        .yandexsbmt {
+                            color: #FFF;
+                            padding: 7px;
+                            border: 1px solid #59BA61;
+                            background: #59BA61;
+                            cursor: pointer;
+                            -webkit-border-radius: 5px;
+                            border-radius: 3px;
+                            -webkit-transition: all .2s ease-in-out;
+                            -moz-transition: all .2s ease-in-out;
+                            -o-transition: all .2s ease-in-out;
+                            transition:
+                                all .2s ease-in-out;
+                        }
+
+                        .yandexsbmt:hover {
+                            background: #FFF;
+                            color: #59BA61;
+                        }
+
+                    </style>
+                </form>
+                <br>
+                <br>
+            </div>
+            <script>
+                $(function () {
+                    $('input:radio[name="summDonate"]').change(function () {
+                        // console.log(this.value);
+                        if ($(this).val() != 'manual') {
+
+                            $('input:text[name="sum"]').attr('disabled', '');
+                            $('input:text[name="sum"]').css('border', '1px solid #dcdcdc');
+                            $('input:text[name="sum"]').val(this.value)
+
+                            // alert("You selected the first option and deselected the second one");
+                        } else {
+                            $('input:text[name="sum"]').removeAttr('disabled');
+                            $('input:text[name="sum"]').css('border', '1px solid #59BA61');
+
+                            // alert("You selected the second option and deselected the first one");
+                        }
+                    });
+                    $('#checkOferta').change(function(){
+                      console.log("$('#checkOferta').is(':checked')", $('#checkOferta').is(':checked') );
+                      if($('#checkOferta').is(':checked')){
+                        $('.yandexsbmt').css('display', 'block');
+                      }else{
+                        $('.yandexsbmt').css('display', 'none');
+                      }
+                    })
+                });
+
+            </script>
+        </div>
+        <div class="col col--md-4" style="padding-bottom:30px;display: none">
+            <!--Блок с оплатой Киви-->
+            <h4>QIWI-Кошелек</h4>
+            <iframe id="qiwiPage" src="https://my.qiwi.com/fond68?noCache=true" width="390" height="590"
+                allowTransparency="true" scrolling="no" frameBorder="0" onload="qiwiLoaded()"
+                style="padding-top:10px"></iframe> <br>
+        </div>
+        <div class="col col--md-4" style="padding-bottom:30px">
+            <!--Блок с оплатой Киви-->
+            <h4 style="background-color:#fff; z-index: 2;">Cloudpayments</h4>
+            <div class="cloudpaymentBlock"
+                style="box-sizing: border-box; padding: 15px; margin-bottom: 20px; background-color: #F7F6F6;height: 512px;text-align: center;display: none;">
+                <div class="chooseDonation currency">
+                    <div>
+                        <input type="radio" name="summDonateC" id="500C" value="500"> <label for="500C">500</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="summDonateC" id="1000C" value="1000"> <label for="1000C">1 000</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="summDonateC" id="3000C" value="3000"> <label for="3000C">3 000</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="summDonateC" id="10000C" value="10000"> <label for="10000C">10
+                            000</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="summDonateC" id="manualC" value="manual" checked=""> <label
+                            for="manualC">Другая сумма</label>
+                    </div>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <h5>Чтобы оплатить-наведите камеру телефона на изображение ниже, откроется удобная форма оплаты</h5>
+                <img src="/images/qr-cloudpayments.png" alt="" srcset="">
+                <div class="blackline" style="background-color: black;width: 100%; height: 2px;margin: 5px 0;">
+                </div>
+                <h5>Чтобы оплатить c компьютера</h5>
+                Сумма: <input type="number" id="sum" value="100" name="sumC"
+                    style="max-width:100%; padding:7px;border:1px solid #59BA61; background:#FFF; -webkit-border-radius: 5px; border-radius: 3px;">
+                рублей. <br>
+                <br>
+                <button id="Ccheckout" onclick="pay()"
+                    style="color:#FFF; padding:7px; border:1px solid #59BA61; background:#59BA61; cursor:pointer; -webkit-border-radius: 5px; border-radius: 3px;width: 80%;">Пожертвовать</button>
+                <script>
+                    $(function () {
+                        $('input:radio[name="summDonateC"]').change(function () {
+                            if ($(this).val() != 'manual') {
+
+                                $('#sum').attr('disabled', '');
+                                $('#sum').css('border', '1px solid #dcdcdc');
+                                $('#sum').val(this.value)
+
+                                // alert("You selected the first option and deselected the second one");
+                            } else {
+                                // if( $('#checkOferta').val == true)
+                                $('#sum').removeAttr('disabled');
+                                $('#sum').css('border', '1px solid #59BA61');
+
+                                // alert("You selected the second option and deselected the first one");
+                            }
+                        });
+                        
+                    });
+
+                </script>
+            </div>
+            <iframe id="iframe3" src="https://c.cloudpayments.ru/payments/8d46f061470649b78fcfeeb809aadcb1" hspace="5"
+                scrolling="no" frameborder="0"
+                style="height: 590px;width: 100%;overflow-y: hidden;displa1y:none;margin-top:0px;z-index: 1;"
+                onload=delapex()></iframe>
+        </div>
+    </div>
+    <div class="row accordion__title-element"
+        style="justify-content: center;border-top: chartreuse 1px solid;border-bottom: chartreuse 1px solid;padding: 3px auto">
+        <h2 cl1ass="accordion__title-element" style="text-align: center;">Сбербанк</h2>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <div class="col col--md-6" style="padding-bottom:30px">
+            <h4>На счёт Фонда ПАО «Сбербанк»</h4>
+            <p>
+                <b>Организация:</b> Фонд «ПРЕОДОЛЕНИЕ»
+            </p>
+            <p>
+                <b>ИНН: </b><span style="text-decoration:underline; text-decoration-color:#59ba61">6829911486</span>
+                <b>КПП:</b> 682901001
+            </p>
+            <p>
+                <b>Расчетный счет:</b> <span
+                    style="text-decoration:underline; text-decoration-color:#59ba61">40703.810.9.61000000114</span>
+            </p>
+            <p>
+                <b>Банк:</b> ТАМБОВСКОЕ ОТДЕЛЕНИЕ N8594 ПАО СБЕРБАНК
+            </p>
+            <p>
+                <b>БИК:</b> <span style="text-decoration:underline; text-decoration-color:#59ba61">046850649</span>
+            </p>
+            <p>
+                <b>Корреспондентский счёт №:</b> 30101.810.8.00000000649
+            </p>
+            <p>
+                <b>Цель взноса:</b> "Благотворительный взнос на уставные цели"
+            </p>
+            <p>
+                <b>Директор Фонда:</b> Юхачёв Павел Сергеевич
+            </p>
+            <p>
+                Действует на основании <a href="/upload/helpMoney/ustav.doc" target="_blank">Устава Фонда</a>.
+            </p>
+            <p>
+                <b>При совершении пожертвования, Вы подтверждаете свое согласие с условиями Договора - публичной оферты
+                    о добровольном благотворительном пожертвовании. <a href="/upload/helpMoney/Dogovor_oferti.pdf"
+                        target="_blank">Скачать договор пожертвования</a>.</b>
+            </p>
+        </div>
+        <div class="col col--md-6">
+            <h4>Через мобильное приложение Сбербанк</h4>
+            <ul>
+                <li>
+                    <p>
+                        Откройте приложение <b>Сбербанк</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Перейдите на вкладку <b>Платежи</b> и выберите категорию <b>Платеж по реквизитам</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Введите данные <b>Расчетного счета</b>, <b>ИНН</b> и <b>БИК</b> и нажмите <b>Продолжить</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Введите <b>ФИО</b> и нажмите <b>Продолжить</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        В поле <b>Назначение платежа</b> введите <b>Благотворительный взнос на уставные цели</b> и
+                        нажмите <b>Продолжить</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Установите сумму платежа и нажмите <b>Продолжить</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Проверьте данные и <b>Подтвердите</b> платеж.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col--md-6" style="margin-bottom:50px;">
+            <div>
+                <img src="/images/qr-full.png" style="width: 235px; max-width:90%;">
+            </div>
+            <p>
+                С назначением платежа: "Пожертвование на уставные цели"
+            </p>
+        </div>
+        <div class="col col--md-6" style="margin-bottom:50px;">
+            <div>
+                <img src="/images/qr-empty.png" style="width: 235px; max-width:90%">
+            </div>
+            <p>
+                Без назначения платежа
+            </p>
+        </div>
+    </div>
+    <div id="accordion" style="display: none;">
+        <div class="accordion__title-element">
+            <img src="http://fond68.ru/upload/iblock/d95/d95f64636c5a1ade8863b63c232da755.jpg" alt=""
+                class="accordion__icon">
+            <h4 class="accordion__title">Отправить СМС на короткий номер 3434</h4>
+            <div class="accordion__arrow">
+            </div>
+        </div>
+        <div class="accordion__content">
+            <p>
+            </p>
+            <p>
+                Отправьте SMS-сообщение на короткий номер 3434 со словом ЩЕДРОСТЬ или SCHEDROST' (написание доступно как
+                латиницей, так и кириллицей, регистр значения не имеет) и через пробел укажите сумму пожертвования
+                цифрой – например, «Щедрость 100» или "SCHEDROST' 500".
+            </p>
+            <p>
+                Комиссия с абонента - 0%
+            </p>
+            <p>
+                Услуга доступна для операторов МТС, Билайн, Мегафон, Теле2.
+            </p>
+            <p>
+                Допустимый размер пожертвования — от 10 до 15 000 рублей.
+            </p>
+            <script language="JavaScript">
+                function winop() {
+                    windop = window.open("http://help.mixplat.ru/megafon/mf.html", "mywin",
+                        "height=200,width=600,left=100,top=30");
+                }
+
+            </script> <a target="_blank" href="https://mixplat.ru/payment/init?key=836bfe6c4e23368b9b9f4934940fb050"
+                rel="nofollow"> Заплатить через MIXPLAT </a>
+            <p>
+            </p>
+        </div>
+        <div class="accordion__title-element">
+            <img src="http://fond68.ru/upload/iblock/c96/c9696bc14b787fe0b67b61f3598c814d.jpg" alt=""
+                class="accordion__icon">
+            <h4 class="accordion__title">Платежные системы</h4>
+            <div class="accordion__arrow">
+            </div>
+        </div>
+        <div class="accordion__content">
+            <hr>
+            <br>
+            <h4>Яндекс.Деньги</h4>
+            <div style="box-sizing: border-box; padding: 15px; margin-bottom: 20px; background-color: #F7F6F6;">
+                Вы можете воспользоваться сервисом ЮMoney, перечислив со своей карты
+                <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+                    <br>
+                    <br>
+                    <input type="hidden" name="receiver" value="410014934987209"> <input type="hidden"
+                        name="formcomment" value=""> <input type="hidden" name="short-dest" value=""> <input
+                        type="hidden" name="label" value="$order_id"> <input type="hidden" name="quickpay-form"
+                        value="donate"> <input type="hidden" name="targets" value="Пожертвование">
+                    Сумма: <input type="text" name="sum" required="" value="" data-type="number"
+                        style="max-width:100%; padding:7px;border:1px solid #59BA61; background:#FFF; -webkit-border-radius: 5px; border-radius: 3px;">
+                    рублей. <br>
+                    <br>
+                    Комментарий: <br>
+                    <textarea name="comment"
+                        style="width:100%; padding:10px; border:1px solid #59BA61; background:#FFF; -webkit-border-radius: 5px; border-radius: 3px; resize: none;"
+                        maxlength="190">Пожертвование на уставные цели фонда. </textarea>
+                    <!--
+<input type="text" name="comment" size="43" value="Пожертвование на уставные цели фонда.">
+--> <br>
+                    <br>
+                    <input type="hidden" name="need-fio" value="true"> <input type="hidden" name="need-email"
+                        value="false"> <input type="hidden" name="need-phone" value="false"> <input type="hidden"
+                        name="need-address" value="false"> <label><input type="radio" name="paymentType" value="PC"
+                            checked="">
+                        Яндекс.Деньгами</label> <br>
+                    <br>
+                    <label><input type="radio" name="paymentType" value="AC"> Банковской картой</label> <br>
+                    <br>
+                    <label><input type="radio" name="paymentType" value="MC"> С мобильного счета</label> <br>
+                    <br>
+                    <input type="submit" target="_blank" class="yandexsbmt" value="Перевести">
+                    <style>
+                        .yandexsbmt {
+                            color: #FFF;
+                            padding: 7px;
+                            border: 1px solid #59BA61;
+                            background: #59BA61;
+                            cursor: pointer;
+                            -webkit-border-radius: 5px;
+                            border-radius: 3px;
+                            -webkit-transition: all .2s ease-in-out;
+                            -moz-transition: all .2s ease-in-out;
+                            -o-transition: all .2s ease-in-out;
+                            transition:
+                                all .2s ease-in-out;
+                        }
+
+                        .yandexsbmt:hover {
+                            background: #FFF;
+                            color: #59BA61;
+                        }
+
+                    </style>
+                </form>
+                <br>
+                <hr>
+                <br>
+                <h4>QIWI-Кошелек</h4>
+                <iframe width="728" height="200"
+                    src="https://widget.qiwi.com/widgets/big-widget-728x200?publicKey=7tXTAb36ZXSTV19PPzWtd2yTH7bGyK4mM3qBr4WCMyzKeJ9iDiVUnwQJBGegSe94Vn4jYeupHm3cxYkRSRhtB9aGpHZtuWVhJv2id31fW3KdWotkRD11268FwnMVmH"
+                    allowtransparency="true" scrolling="no" frameborder="0" onload="qiwiLoaded();"></iframe>
+                <hr>
+                <br>
+                <script language="JavaScript">
+                    this.pay = function () {
+                        var widget = new cp.CloudPayments();
+                        var sum = document.querySelector("#sum");
+                        var val = parseFloat(sum.value);
+
+                        if (val < 1) {
+                            val = 100
+                        }
+
+                        widget.charge({ // options
+                                publicId: 'pk_cc7c675681aa8d462793ed5f62461', //id из личного кабинета
+                                amount: val, //сумма
+                                currency: 'RUB', //валюта
+                                skin: "classic", //дизайн виджета
+                                data: {
+                                    myProp: 'myProp value' //произвольный набор параметров
+                                }
+                            },
+                            function (options) { // success
+                                //действие при успешной оплате
+                            },
+                            function (reason, options) { // fail
+                                //действие при неуспешной оплате
+                            });
+                    };
+
+                </script>
+                <h4>Cloudpayments</h4>
+                Сумма: <input type="number" id="sum" value="100"
+                    style="max-width:100%; padding:7px;border:1px solid #59BA61; background:#FFF; -webkit-border-radius: 5px; border-radius: 3px;">
+                рублей. <br>
+                <br>
+                <button id="Ccheckout" onclick="pay()"
+                    style="color:#FFF; padding:7px; border:1px solid #59BA61; background:#59BA61; cursor:pointer; -webkit-border-radius: 5px; border-radius: 3px;">Перевести</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <br>
+    <script>
+        const delapex = () => document.querySelectorAll('#iframe3').contentWindow.document.querySelectorAll('.apex')[0]
+            .style = 'display:none'
+
+    </script>
+    <!-- <script>
+      const qiwiLoaded = () => {
+          qiwiHeader = document.querySelector('.buRnLN');
+          console.log("🚀 ~ file: Untitled-1 ~ line 531 ~ qiwiLoaded ~ qiwiHeader", qiwiHeader)
+          divLogo = document.createElement('div');
+          divLogo.className = 'logoFund';
+          divLogo.innerHTML =
+              '<img src="/bitrix/templates/innet_focus_s1/img/about-fund-image.png" alt="Логотип преодоления" srcset="">';
+          console.log("🚀 ~ file: Untitled-1 ~ line 535 ~ qiwiLoaded ~ divLogo", divLogo)
+          qiwiHeader.append(divLogo)
+      }
+      // $("#qiwiPage").load($('.buRnLN').after('<img src="/bitrix/templates/innet_focus_s1/img/about-fund-image.png" alt="Логотип преодоления" srcset="">'))
+  </script> -->
+</div>
+<br>

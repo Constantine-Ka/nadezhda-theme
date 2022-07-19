@@ -1,0 +1,34 @@
+.contentTitle {
+  height: 207px;
+  width: auto;
+  text-align: end;
+}
+.contentTitle h3 {
+  width: 100%;
+  right: 47px;
+  position: absolute;
+  justify-content: end;
+  text-align: end;
+  top: 47px;
+  font-size: 16;
+  z-index: 2;
+}
+.contentTitle .titleRound {
+  position: absolute;
+  box-sizing: border-box;
+  right: 0%;
+  width: 207px;
+  height: 207px;
+  border: 16px #e2cfcc solid;
+  border-radius: 50%;
+  background: none;
+  padding: 12px;
+  opacity: 0.3;
+  z-index: 1;
+}
+.contentTitle .titleRound .roundInside {
+  width: 151px;
+  height: 151px;
+  background: #e2cfcc;
+  border-radius: 50%;
+}

@@ -1,0 +1,104 @@
+.dws-menu [type="checkbox"],
+.dws-menu label.toggleSubmenu {
+    display: none;
+}
+
+.dws-menu label.toggleMenu {
+    justify-content: center;
+    text-align: center;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,f6f6f6+2,c4c5c7+98,757577+100;Custom+3 */
+
+    display: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dws-menu label.toggleMenu .fa {
+    top: 15px;
+    left: 12px;
+    color:#CE9A98;
+    font-size: 22px;
+}
+
+@media all and (min-width: 1000px) {
+    header {
+        transform: translate(0,-70vh);
+		z-index:1000000;
+    }
+    
+}
+@media all and (max-width: 1000px) {
+	
+    header {
+        position: sticky;
+        top:0;
+        left: 0;
+		display:none;
+    }
+    .header5-custom{
+        height: 90vh;
+    }
+    
+    .btn-block-custom a{
+        display: none;
+    }
+    .dws-menu {
+        overflow: hidden;
+    }
+
+    .dws-menu ul {
+        display: none;
+/*         max-height: 0; */
+        transition: max-height 0.3s;
+    }
+
+    .dws-menu li>ul li ul {
+        position: absolute;
+        right: auto;
+        top: auto;
+    }
+
+    .dws-menu label.toggleMenu {
+        di1splay: block;
+    }
+
+    input.toggleMenu:checked+label.toggleMenu {}
+
+    input.toggleMenu:checked~ul,
+    input.toggleSubmenu:checked~ul {
+        displ1ay: block;
+        position: relative;
+        max-height: 5000px;
+        transition: max-height 2s ease-in;
+    }
+
+    .dws-menu label.toggleSubmenu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: block;
+    }
+
+    .dws-menu label.toggleSubmenu .fa:before {
+        content: "\f0d7";
+    }
+
+    .dws-menu label.toggleSubmenu .fa {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+    }
+
+    .dws-menu input.toggleSubmenu:checked~label.toggleSubmenu .fa::before {
+        content: "\f0d8";
+        color: #ffffff;
+    }
+	.dws-menu > ul li {
+		max-width:100%
+	}
+}

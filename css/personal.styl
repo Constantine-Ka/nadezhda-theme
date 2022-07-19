@@ -1,0 +1,108 @@
+.personal
+    display flex
+    &:nth-child(odd)
+       justify-content center
+    &:nth-child(2)
+        .location
+            &:before
+                background #CE9A98
+    &:nth-child(4)
+        .location
+            &:before
+                background #42466D
+    .round
+        width 30px
+        height: 30px
+        border-radius 50%
+        margin: 10px 
+
+    .location
+        margin 20px
+        align-self flex-end
+        font-family Rubik
+        font-style normal
+        font-weight normal
+        font-size 20px
+        line-height 24px
+        color #171c4e
+        margin-left: 30px
+        &:before
+            content: ''
+            position absolute
+            width 30px
+            background  tomato
+            height: 30px
+            border-radius 50%
+            margin-left -35px 
+            font-size 30px
+            background #CE9A98
+    .card
+        border none !important
+        // background: #8f8f8f
+        width 250px
+        
+
+        height 250px
+        justify-content center
+        align-items center 
+               
+        margin 5px
+        .round
+            width 140px
+            height 140px
+            overflow hidden
+            display flex
+            justify-content center
+            align-items center
+            img 
+                
+                width 90%
+                height 90%
+                border-radius 50%
+        .staff
+            display flex
+            align-items center  
+            justify-content center
+            font-family: Rubik
+            font-style: normal
+            font-weight: bold
+            font-size: 12px
+            line-height: 19px
+            width 190px
+            height 60px
+            // padding 5px 
+            text-align: center
+            color #171c4e
+            border-radius 30px
+            p.txt 
+               text-align: center
+               margin 0
+
+
+        .staff.light-color
+            color #fff
+        .staff.dark-color
+            color #fff
+        .fio
+            margin-top 10px
+            width 100%
+            height 30px
+            border-radius 15px
+            font-family Rubik 
+            font-style normal 
+            text-align: center
+            font-weight normal 
+            padding 5px 
+            font-size 14px 
+            color #171c4e
+            line-height 17px 
+        .fio.light-color
+            background #E1CECB
+        .fio.dark-color
+            background: #BFCECE;
+
+.dark-color
+    background #42466D
+.light-color
+    background #CE9A98
+        

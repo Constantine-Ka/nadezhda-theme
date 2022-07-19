@@ -1,0 +1,237 @@
+.nurse-row {
+  font-family: Rubik;
+  font-size: 20px;
+  line-height: 24px;
+}
+.nurse-row {
+  margin: 80px 0;
+}
+.nurse-row .round,
+.nurse-row .mark {
+  padding: 0;
+  margin: 17px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.nurse-row p {
+  width: calc(100% - 68px);
+  margin: 0;
+  align-items: center;
+}
+.nurse-row .white-line {
+  margin: auto;
+  height: 4px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.nurse-about {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  color: #171c4e;
+}
+.nurse-about .text {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: justify;
+}
+.nurse-about .text p {
+  margin: 13px 0;
+  width: 100%;
+}
+.nurse-about .our-info p {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  height: 57px;
+  margin: 0;
+  width: auto;
+}
+.nurse-about .our-info .our-contact {
+/*   height: 205px; */
+  background: #b35047;
+  border-radius: 50px;
+  padding: 22px 0;
+
+}
+.nurse-about .our-info .our-contact p {
+  text-align: center;
+  color: #fff;
+  margin: 8px 0;
+	font-size:1.2rem;
+  height: auto;
+}
+.nurse-about .our-info .our-contact p a {
+  text-decoration: none;
+  color: #fff;
+}
+.nurse-about .our-info .our-contact p a ::hover {
+  color: #e1cecb;
+}
+.nurse-about .our-info .our-contact .white-line {
+  margin: auto;
+  height: 4px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.nurse-job-requirement h2 {
+  font-size: 25px;
+  line-height: 31px;
+  color: #171c4e;
+}
+.nurse-job-requirement .item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nurse-job-requirement .item .round {
+  background-color: #42466d;
+}
+.nurse-line {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 60px;
+  background-color: #ce9a98;
+}
+.nurse-line h3,
+.nurse-line h4 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.nurse-service-requirement h4 {
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #171c4e;
+  display: flex;
+  align-items: center;
+}
+.nurse-service-requirement a {
+ padding 16px;
+  text-decoration: none;
+  he1ight: 88px;
+  border-radius: 25px;
+  background-color: #bfcece;
+	font-size:16px;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+}
+.nurse-service-requirement .item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nurse-service-requirement .item .round {
+  background-color: #b35047;
+}
+.nurse-service-requirement .item .mark {
+  display: flex;
+  align-items: center;
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 55px;
+  line-height: 68px;
+  color: #ce9a98;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 48px;
+}
+.nurse-service-requirement .item .link {
+  text-decoration: underline;
+  color: #b35047;
+  background-color: #fff;
+}
+.nurse-row.giveMe h4 {
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #171c4e;
+  display: flex;
+  align-items: center;
+}
+.nurse-row.giveMe .item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nurse-row.giveMe .item .round {
+  background-color: #BFCECE;
+}
+.nurse-row.giveMe .item p {
+  font-size: 19px;
+}
+.nurse-row.giveMe .info p {
+  width: 100%;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #171c4e;
+}
+.nurse-row.giveMe .info .contacts {
+  height: 225px;
+  border-radius: 50px;
+  background: #42466d;
+  margin: 17px 0;
+  padding: 24px 0;
+}
+.nurse-row.giveMe .info .contacts p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 8px 0;
+}
+.nurse-row.paymenstService a {
+  background: #bfcece;
+/*   height: 75px; */
+  padding: 13px;
+  text-align: center;
+  font-size: 19px;
+  line-height: 23px;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.nurse-row.giveMe .vertical{
+	width:6px;
+	background-color:#E1CECB;
+}
+@media (max-width:1200px){
+	.nurse-row.giveMe .vertical{
+		display:none
+	}
+}
+.bth-tariffs{
+	opacity:1;
+}
+
+.bth-tariffs:hover{
+	opacity:0.85;
+}
+.socsite {
+	color:#171C4E;
+}
+.socsite:hover {
+	color:#171C4E55;
+}

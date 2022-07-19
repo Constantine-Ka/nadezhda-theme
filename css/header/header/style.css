@@ -1,0 +1,105 @@
+.header5-custom {
+  margin-top: 70px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffd700;
+}
+.header5-custom .bg-img {
+  width: 100%;
+  position: absolute;
+  height: 80%;
+  bottom: 0;
+}
+.header5-custom .bg-img .left,
+.header5-custom .bg-img .right {
+  position: absolute;
+  width: 640px;
+  height: 100%;
+}
+@media screen and (max-width: 745px) {
+  .header5-custom .bg-img .left,
+  .header5-custom .bg-img .right {
+    display: none;
+  }
+}
+.header5-custom .bg-img .left {
+  left: 10px;
+  background: url("../images/mainblock/mortal-kombat-transparent-1.png");
+  background-size: cover;
+}
+.header5-custom .bg-img .left::before {
+  content: '';
+  background: url("../images/mainblock/left-before.png");
+  width: 300px;
+  height: 200px;
+  top: 0px;
+}
+.header5-custom .bg-img .right {
+  right: 10px;
+  background: url("../images/mainblock/favpng_deus-ex-human-revolution-deus-ex-mankind-divided-deus-ex-invisible-war-xbox-360.png");
+  background-size: cover;
+}
+.header5-custom .basic-content {
+  font-weight: bold;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 800px;
+  height: auto;
+  background: none;
+  text-align: center;
+}
+.header5-custom .basic-content .logo {
+  position: relative;
+  width: 300px;
+  height: 180px;
+  margin: 0 auto;
+}
+.header5-custom .basic-content .logo img {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+.header5-custom .basic-content .logo p {
+  text-align: center;
+  font-size: 30pt;
+  font-family: impact;
+  text-transform: uppercase;
+  color: #ffd700;
+  background: url("../images/mainblock/title-bg.png") no-repeat;
+  background-size: cover;
+}
+.header5-custom .basic-content .title {
+  width: 100%;
+  font-size: 90px;
+  font-family: impact;
+  text-transform: uppercase;
+  color: #171c4e;
+}
+@media screen and (max-width: 800px) {
+  .header5-custom .basic-content .title {
+    font-size: 45px;
+  }
+}
+.header5-custom .basic-content .workTime {
+  width: 100%;
+  font-family: impact;
+  text-align: center;
+  font-size: 34pt;
+}
+@media screen and (max-width: 800px) {
+  .header5-custom .basic-content .workTime {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header5-custom .basic-content {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 800px) {
+  .header5-custom .basic-content .link-phone {
+    display: none;
+  }
+}

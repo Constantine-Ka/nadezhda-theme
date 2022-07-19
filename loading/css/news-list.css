@@ -1,0 +1,40 @@
+.shortNewsBlock {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  margin: 20px 0;
+}
+.shortNewsBlock .shortNewsBlockLink {
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 40px;
+  display: block;
+  height: 100%;
+  width: 340px;
+  overflow: hidden;
+  margin: 10px 20px;
+}
+.shortNewsBlock .shortNewsBlockLink img {
+  width: 340px;
+  height: 340px;
+  overflow-y: hidden;
+  object-fit: cover;
+}
+.shortNewsBlock .shortNewsBlockLink p {
+  padding: 20px;
+  width: 340px;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+}
+.shortNewsBlock:nth-child(even) .shortNewsBlockLink {
+  background-color: #bfcece;
+}
+.shortNewsBlock:nth-child(odd) .shortNewsBlockLink {
+  background-color: #ce9a98;
+}
+.shortNewsBlock:hover {
+  opacity: 0.6;
+}

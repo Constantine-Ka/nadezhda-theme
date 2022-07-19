@@ -1,0 +1,60 @@
+* {
+  font-family: Open Impact, Haettenschweiler Arial Narrow Bold, sans-serif;
+}
+.entry-content {
+  background: #f6f6f6;
+  width: 1384;
+  padding: 75px;
+}
+.entry-content .title {
+  position: relative;
+  margin-right: 0;
+  right: 0%;
+  width: 100%;
+  height: 207px;
+}
+.entry-content .title h5,
+.entry-content .title .round {
+  right: 0;
+  color: #1d202f;
+}
+.entry-content .title h5 {
+  position: absolute;
+  font-size: 36px;
+  text-align: right;
+  margin-right: 87px;
+  padding: 18px 0;
+  z-index: 2;
+}
+.entry-content .title .round {
+  box-sizing: border-box;
+  position: absolute;
+  width: 207px;
+  height: 207px;
+  background: none;
+  border: 16px solid #e2cfcc;
+  border-radius: 50%;
+  z-index: 1;
+}
+.entry-content .title .round .round-inside {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 151px;
+  height: 151px;
+  border-radius: 50%;
+  background: #e2cfcc;
+}
+.entry-content .col-doc {
+  position: relative;
+  width: max-content;
+  padding: 33px;
+  margin-bottom: 20px;
+  background: #ff6347;
+  border-radius: 65px;
+}
+.entry-content .col-doc a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,33 @@
+#nav {
+  background: rgba(245,234,232,0.275);
+}
+#nav nav.row .hamburger-blc {
+  position: sticky;
+  top: 306px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  display: none;
+}
+
+#nav nav.row ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  height: 79px;
+  padding: 0;
+}
+#nav nav.row ul li {
+  list-style: none;
+  min-width: 180px;
+  justify-content: center;
+}
+#nav nav.row ul li a {
+  text-decoration: none;
+  min-width: 180px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #42466d;
+  text-align: center;
+}

@@ -1,0 +1,226 @@
+p {
+  color: #171c4e;
+}
+.fundraising {
+  margin-top: 82px;
+}
+.fundraising .chart {
+  transform: rotate(2deg);
+  background: conic-gradient(#bfcece 3.%, #CE9A98 0);
+  background: url('/wp-content/uploads/2022/01/8Ra5eOhrPfA.jpg');
+  background-size: container;
+  height: 366px;
+  width: 366px;
+  border: #F3F2F2 solid 23px;
+  border-radius: 50%;
+  float: left;
+  padding-right: 20px;
+}
+.fundraising .chart .chart2
+{   position: absolute;
+    background: conic-gradient(#CE9A98 3.42%, transparent 0);
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+}
+.fundraising .chart::a1fter{
+  content:'';
+  position: absolute;
+  background: conic-gradient(#CE9A98 3.42%, transparent 0);
+  width: 302px;
+  border-radius: 50%;
+  height: 302px;
+
+}
+.fundraising .anotation-chart {
+  height: 110px;
+  width: 100%;
+}
+.fundraising .anotation-chart .line {
+  position: absolute;
+  width: 420px;
+  height: 4px;
+  margin: 0 3px;
+  top: 50px;
+  background: #bebdbd;
+}
+@media (max-width: 1215px) {
+  .fundraising .anotation-chart .line {
+    display: none;
+  }
+}
+.fundraising .anotation-chart p {
+  text-align: center;
+  width: 100%;
+  height: 28px;
+  margin: 0;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #171c4e;
+}
+.fundraising .anotation-chart:nth-child(1) .line {
+  top: 15px;
+  left: -160px;
+}
+.fundraising .anotation-chart:nth-child(2) .line {
+  top: 120px;
+  left: 0;
+}
+.fundraising:nth-child(2) div {
+  height: 130px;
+  border-radius: 30px;
+padding:22px;
+  background: #fff7f5;
+}
+.fundraising:nth-child(7) {
+  margin-top: 36px;
+/*   height: 40px; */
+}
+.fundraising:nth-child(7) p {
+  width: 100%;
+  border-radius: 30px;
+  font-size: 19px;
+  line-height: 22px;
+  margin: 0;
+  padding: 22px;
+  background: #dfe7e7;
+}
+.fundraising:nth-child(8) .round,
+.fundraising:nth-child(9) .round {
+  width: 92px;
+  max-width: 92px;
+  flex: 0 0 92px;
+  height: 92px;
+  border: 10px solid #ececf0;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.fundraising:nth-child(8) p,
+.empt,
+.fundraising:nth-child(9) p {
+  margin-left: 9px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #171c4e;
+}
+.fundraising:nth-child(9) {
+  margin-top: 36px;
+}
+.fundraising:nth-child(9) p {
+  border-radius: 70px;
+/*   background: #bfcece; */
+  font-size: 24px;
+  line-height: 28px;
+/*   text-align: center; */
+  padding: 22px 0;
+  color: #171c4e;
+}
+.fundraising:nth-child(10) {
+  margin-top: 82px;
+}
+.fundraising:nth-child(10) p {
+  border-radius: 30px;
+  background: #e1cecb;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  padding: 22px;
+  color: #171c4e;
+}
+.fundraising:nth-child(8) .round {
+  display: flex;
+  background: #42466d;
+}
+.fundraising:nth-child(8) .round .line {
+  position: absolute;
+  background: #fff;
+  height: 7px;
+  border-radius: 8px;
+}
+.fundraising:nth-child(8) .round .line:nth-child(1) {
+  width: 44px;
+  top: 18px;
+  left: 24px;
+}
+.fundraising:nth-child(8) .round .line:nth-child(2) {
+  width: 19px;
+  top: 30px;
+  left: 10px;
+}
+.fundraising:nth-child(8) .round .line:nth-child(3) {
+  width: 44px;
+  top: 42px;
+  left: 24px;
+}
+.fundraising:nth-child(8) .round .line:nth-child(4) {
+  width: 32px;
+  top: 56px;
+  left: 9px;
+}
+.fundraising:nth-child(9) .round {
+  background: #b35047;
+  padding: 23px 8px;
+}
+.fundraising:nth-child(9) .round .money {
+  width: 59px;
+  height: 27px;
+  background: #fff;
+}
+.fundraising:nth-child(9) .round .money .zero {
+  background: #b35047;
+  border-radius: 50%;
+  width: 24px;
+  height: 19px;
+}
+.fundraising a {
+  font-size: 24px;
+  line-height: 28px;
+  color: #171c4e;
+  padding: 18px 34px;
+/*   background: #CE9A98; */
+	background: rgba(191,206,206,0.314);
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+/*   margin-top: 100px; */
+  margin-bottom: 82px;
+}
+.fundraising a:hover {
+/*   background: rgba(191,206,206,0.314); */
+	background: #CE9A98;
+/* 	background: #b35047; */
+  transition: 0.3;
+}
+.fundraising .description {
+  display: inline;
+}
+@media (min-width: 1215px) {
+  .fundraising .description {
+    display: none;
+  }
+}
+.smalltext {
+  margin-top: 9px;
+}
+.smalltext p {
+  width: 100%;
+  border-radius: 30px;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  padding: 22px;
+}
+.modal {
+  z-index: 25000;
+}
+/* .round .line{
+	background-color:#fff;
+	height:10px; 
+	border-radius:5px;
+	margin:10px 0
+} */

@@ -1,0 +1,63 @@
+#nav
+    background #f5eae846
+    nav.row
+        .hamburger-blc
+            position sticky
+            top 306px
+            display flex
+            justify-content: center
+            width 100%
+            display: none
+            .hamburger
+                cursor pointer
+                display block
+                .line
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    background-color: #CE9A98;
+                    margin: 6px 0;
+                    opacity: 1;
+                    transition: 0.3s all;
+
+                &:hover .line:nth-child(1)
+                    transform: translateY(9px)rotate(45deg);
+                    transition: 0.3s all;
+
+                &:hover .line:nth-child(2)
+                    opacity: 0;
+                    transition: 0.3s all;
+
+                &:hover .line:nth-child(3)
+                    transform: translateY(-9px) rotate(-45deg);
+                    transition: 0.3s all;
+            p.hamburger-txt
+                font-size 20px
+                line-height 23px
+                text-align center
+                color #42466D
+                align-self center
+                margin auto 6px
+        ul
+            list-style none
+            display flex
+            flex-wrap wrap
+            height 80px
+            height 79px
+            padding 0
+            li
+                list-style none
+                min-width 180px
+                justify-content center
+                a
+                    text-decoration none
+                    min-width 180px
+                    font-size 22px
+                    line-height 26px
+                    color #42466D
+                    text-align center
+
+
+
+
+

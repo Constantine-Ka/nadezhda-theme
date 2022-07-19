@@ -1,0 +1,110 @@
+body{
+}
+header{
+ /*margin-top: 200px;*/
+ font-family: Cuprum, Arial, Helvetica, sans-serif;
+}
+.dws-menu *{
+ margin: 0;
+ padding: 0;
+ background: #f5eae846;
+
+}
+.dws-menu ul,
+.dws-menu ol{
+ list-style: none;
+}
+.dws-menu > ul{
+ display: flex;
+ justify-content: center;
+}
+.dws-menu > ul li {
+    justify-content: center;
+ position: relative;
+ border-right: 1px solid #c7c8ca;
+}
+.dws-menu > ul li:first-child{
+ border-left: 1px solid #b2b3b5;
+}
+.dws-menu > ul li:last-child{
+ border-right: 1px solid #babbbd;
+}
+.dws-menu > ul li > a i.fa{
+ position: absolute;
+ top: 15px;
+ left: 12px;
+ font-size: 18px;
+}
+.dws-menu > ul li a{
+    text-align: center;
+    justify-content: center;
+ display: block;
+
+ padding: 15px 30px 15px 40px;
+ font-size: 22px;
+ min-width: 180px;
+ color: #454547;
+ text-decoration: none;
+ transition: all 0.3s ease;
+}
+.dws-menu li a:hover{
+    background: #f5eae832;
+
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.3s ease;
+}
+
+/*sub menu*/
+.dws-menu li ul{
+ position: absolute;
+ min-width: 150px;
+ display: none;
+}
+/* .dws-menu li > ul li{
+ border: 1px solid #c7c8ca;
+}
+.dws-menu li > ul li a{
+ padding: 10px;
+ text-transform: none;
+ background: #e4e4e5;
+} */
+.dws-menu li > ul li ul{
+ position: absolute;
+ right: -250px;
+ top: 0;
+}
+.dws-menu li:hover > ul{
+ display: block;
+}.hamburger-blc .hamburger {
+    cursor: pointer;
+    display: block;
+  }
+.hamburger-blc .hamburger .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ce9a98;
+    margin: 6px 0;
+    opacity: 1;
+    transition: 0.3s all;
+  }
+.hamburger-blc .hamburger:hover .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    transition: 0.3s all;
+  }
+.hamburger-blc .hamburger:hover .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.3s all;
+  }
+.hamburger-blc .hamburger:hover .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    transition: 0.3s all;
+  }
+.hamburger-blc p.hamburger-txt {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #42466d;
+    align-self: center;
+    margin: auto 6px;
+  }

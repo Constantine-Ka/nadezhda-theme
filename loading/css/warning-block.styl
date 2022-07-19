@@ -1,0 +1,54 @@
+.warning-block
+    position absolute
+    right 5px
+    z-index 17000
+    top 5px
+    .icon
+        position absolute
+        right: 0
+        input[type="checkbox"]
+            display none
+        label
+            display flex
+            z-index 17000
+            justify-content center
+            align-items center
+            right 0
+            width 60px
+            height 60px
+            color #fff
+            font-size 48px
+            background-color: #A7352A
+            border: #fff 2px solid
+            padding: auto
+            border-radius 50%
+            &:hover
+                background-color lightness(#A7352A, 55%)
+            &:checked~.alert
+                display block
+    #alert
+        display none
+        min-width 240px
+        min-height 170px
+        width 400px
+        height: 260px
+        background rgba(255, 255, 255, 0.8)
+        border-radius 50px
+        margin-top 90px
+        padding 71px 31px
+        text-align center
+        font-style normal
+        font-weight normal
+        font-size 21px
+        line-height 21px
+        text-align center
+        z-index 22000
+        color:#42466D
+        a
+            text-decoration underline
+            color inherit
+        @media all and (max-width: 410px)
+            width 340px
+            // height 170px
+    @media all and (max-width: 1380px)
+        top -340px

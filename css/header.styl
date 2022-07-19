@@ -1,0 +1,64 @@
+#header_08-08-2021
+    background-color: #f5eae8
+    ul
+        li
+            background-size cover
+            &:nth-child(1),
+            &:nth-child(3)
+                position absolute
+                width 800px
+                height 800px
+                z-index 4
+            &:nth-child(1)
+                top 0
+                left -20%
+            &:nth-child(3)
+                bottom 0
+                right -200px
+            &:nth-child(2)
+                transform:translate(0%, 0%);
+                position absolute
+                bottom: 0%
+                right 30%
+                width 200px
+                height 195px
+                background-size: cover
+                opacity 0.34
+                z-index 2
+
+.scene-Elem
+
+    transform: translateY(var(--translateY));
+    will-change: transform;
+
+.layer
+    position absolute
+
+
+#header5-4
+    .banner
+        .btn-block-custom
+            width 100%
+            position absolute
+            bottom:  70px
+            display flex
+            align-items flex-end
+            z-index 1550
+            a  
+                font-size  22px
+                padding 26px 40px
+                line-height  26px
+                color #42466D
+                height 78px
+                border-radius: 50px
+                background: #C87774;
+                margin: 0 40px
+                &:nth-child(1)
+                    background #C87774
+                    &:hover 
+                        background #CE9A98
+                &:nth-child(2)
+                    background #BFCECE
+                    &:hover 
+                        background #62BABA
+

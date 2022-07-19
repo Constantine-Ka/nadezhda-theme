@@ -1,0 +1,151 @@
+// @import "../theme/font/stylesheet.css"
+@import "../theme/font/american_captain_cyrillic.css"
+.header5-custom
+    // margin-top: 70px
+    width 100vw
+    height 100vh
+    background-color: #f5eae8
+    .bg-img
+        width 100%
+        position absolute
+        height 100%
+        z-index 1
+        
+        .mt-20vh
+            position absolute
+            top -20vh
+        .left
+        .right
+            position absolute
+            width 800px 
+            height 800px
+            z-index 4
+            
+            
+            @media screen and (max-width: 745px)
+                display none    
+        .left 
+            left: -10%;
+            top -30%
+            background url('../../images/nadezhda-round-01.png');
+            background-size: cover
+            z-index 8
+            
+        .left-before
+            left: 40px;
+            top 30px
+            background: url('../../images/nadezhda-round-01.png')
+            width 406px
+            // filter: brightness(0);
+            height 400px
+            z-index 5
+            @media screen and (max-width: 745px)
+                display none 
+        .left-after
+            left: 40px;
+            position absolute
+            width 518px
+            height 338px
+            background: url('../images/mainblock/left-after.png')   
+            z-index 10
+            filter: brightness(0);
+            bottom: 0
+            @media screen and (max-width: 745px)
+                display none 
+        .right
+            right -300px
+            background url('../../images/nadezhda-round-02.png')
+            background-size cover
+            bottom: -20%
+        .right-before
+            filter: brightness(0);
+            right 80px
+            background url('../images/mainblock/right-before.png') 
+            width 472px
+            height 400px
+            @media screen and (max-width: 745px)
+                display none 
+        .right-after
+            position absolute
+            right 80px
+            width 324px
+            height 162px
+            background: url('../images/mainblock/right-before2.png')
+            bottom: 0
+            z-index 5
+            filter: brightness(0);
+            @media screen and (max-width: 745px)
+                display none 
+        .bg 
+            transform:translate(0%, 0%);
+            position absolute
+            bottom: 0%
+            right 30%
+            width 200px
+            height 195px
+            background: url("../../images/nadezhda-heart.png") no-repeat;
+            background-size: cover
+            opacity 0.34
+            z-index 2
+    .basic-content
+        font-weight: bold
+        position absolute
+        transform:translate(-50%, -55%);
+        left 50%
+        top 50%
+        width 1000px
+        height 70% 
+        text-align: center
+        z-index: 3
+        .bg 
+            transform:translate(0%, 0%);
+            position absolute
+            bottom: 0
+            right 0
+            width 400px
+            height 100%
+            // background url('../images/mainblock/content-bg.png') no-repeat 
+            background-size: cover
+            z-index 1
+        .logo
+            position relative 
+            width 300px
+            height: 215px
+            margin: 0 auto
+            
+            img 
+                margin 0 auto
+                width 150px
+                height: 150px
+            p 
+                text-align: center
+                font-size: 30pt
+                font-family 'American Captain Cyrillic' 
+                text-transform: uppercase
+                color #171c4e
+                // background url('../images/mainblock/title-bg.png') no-repeat
+                background-size: cover
+        .title
+            width 100%
+            font-size: 90px
+            font-family 'American Captain Cyrillic' 
+            text-transform: uppercase
+            color #171c4e
+            @media screen and (max-width: 800px)
+                font-size 45px
+        .workTime
+            width 100%
+
+            font-family 'American Captain Cyrillic' 
+            text-align center
+            font-size 34pt
+            @media screen and (max-width: 800px)
+                font-size 17px
+           
+        @media screen and (max-width: 800px)
+            width 90%
+            // .link-modal
+                // display none
+        @media (min-width: 800px)
+            .link-phone
+                display none

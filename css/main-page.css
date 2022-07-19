@@ -1,0 +1,175 @@
+*{
+  font-family: 'Rubik', sans-serif;
+}
+div.about {
+    /* background: url("https://anonadegda.ru/wp-content/uploads/2021/07/Безымянный-1.png"); */
+    background-size:cover;
+    width: 100%;
+  }
+  div.about p {
+    width: 100%;
+  }
+  @media (max-width: 1200px) {
+    div.containerr {
+      max-width: 100%;
+         padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  /* div.containerr {
+    width: 100%;
+    margin: 0 0 0 0;
+    position: relative;
+    padding-left: 76px;
+    padding-right: 76px;
+    margin-top: 142px;
+  } */
+  @media (min-width: 1200px) {
+    div.containerr {
+      width: 100%;
+      margin: 0 0 0 0;
+      position: relative;
+      padding-left: 76px;
+      padding-right: 76px;
+      margin-top: 0px;
+      max-width: 100%;
+    }
+  }
+  div.containerr h2 {
+    font-size: 36px;
+    /*font-family: 'WhitneySSm-Book';*/
+    text-align: left;
+    text-transform:none;
+    color: #1d202f;
+  }
+  div.containerr p {
+    color: #363b59;
+    /*font-family: 'WhitneySSm-Book';*/
+    text-align: left;
+    font-size: 22px;
+	margin:25px 0;
+  }
+  div.containerr .row {
+    width: 100%;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 158px;
+    margin: 80px 0;
+  }
+  div.containerr .row:nth-child(odd) {
+    grid-template-columns:  158px 1fr;
+  }
+  
+  div.containerr .row .icon {
+    display: flex;
+    order:1;
+    justify-content: center;
+    align-items: center;
+    width: 158px;
+    background: #ff6347;
+    border-radius: 50%;
+    height: 158px;
+    color: #fff;
+  }
+  div.containerr .row .icon img {
+    margin: auto;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    left: 0%;
+  }
+  div.containerr .row .textBlc {
+    max-width: 960px;
+    width: 100%;
+    margin: auto 0;
+    order: 2;
+  }
+  div.containerr .row .textBlc h5 {
+    margin: 5px 0;
+  }
+  div.containerr .row:nth-child(even){
+    content:'even'
+  }
+  div.containerr .row:nth-child(even) .textBlc {
+    margin-right: 5px;
+    order: 1;
+    /* width: 100%; */
+    text-align: right;
+  }
+  div.containerr .row:nth-child(even) .icon {
+    margin-right: 5px;
+    order: 2;
+    width: 158px;
+  }
+  div.containerr .row:nth-child(even) .textBlc h2,
+  div.containerr .row:nth-child(even) .textBlc p {
+    text-align: right;
+  }
+  @media (max-width: 1050px){
+    div.containerr .row:nth-child(even) .textBlc{
+      order: 2;
+    }
+    div.containerr .row:nth-child(even) .icon{
+      order: 1;
+    }
+    div.containerr .row:nth-child(odd),
+    div.containerr .row:nth-child(even){
+      grid-template-columns:  1fr;
+    }
+    div.containerr .row:nth-child(odd) .icon,
+    div.containerr .row:nth-child(even) .icon,
+    div.containerr .row:nth-child(odd) .textBlc,
+    div.containerr .row:nth-child(even) .textBlc,
+    div.containerr .row:nth-child(odd) .textBlc h2,
+    div.containerr .row:nth-child(odd) .textBlc p,
+    div.containerr .row:nth-child(even) .textBlc h2,
+    div.containerr .row:nth-child(even) .textBlc p{
+      justify-self: center;
+      text-align: center;
+    }
+  }
+  div.about2 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+  div.about2 .text-blc {
+    position: relative;
+    margin: 0;
+  }
+  div.about2 .twowoman {
+    position: absolute;
+    background: url("/wp-content/uploads/2021/07/Безымянный-7.png");
+    background-size:cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  div.about2 .twowoman-before {
+    position: absolute;
+    transform: translate(25%, 25%);
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    background: none;
+    border: #42466d 11px dashed;
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  
+  div.containerr .row .textBlc a{
+    text-decoration: none;
+    font-size: 22px;
+    color:#fff;
+    width: fit-content;
+    border-radius:42px;
+    padding: 10px 20px;
+  }
+  div.containerr .row .textBlc a:hover{
+    opacity: 0.7;
+  }
+  @media (max-width: 1050px){
+    .pic{
+      display: none;
+    }
+  }

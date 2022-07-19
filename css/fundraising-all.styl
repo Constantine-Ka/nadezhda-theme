@@ -1,0 +1,134 @@
+.fundraising-all
+    display flex
+    align-items center
+    margin 15px 0
+    &:nth-child(1)
+        margin-bottom 62px
+    .fundraising-all-col
+        display flex
+        align-items center
+        .round
+            display flex
+            justify-content center
+            align-items center
+            width 520px
+            height 520px
+            border-radius 50%
+            background conic-gradient(from 0deg, rgba(66, 70, 109, 0.5) 0deg 45deg, transparent 45deg 85deg,#C4C4C4 80deg 90deg,transparent 90deg 160deg, rgba(206, 154, 152, 0.5) 160deg 210deg, transparent 210deg 270deg, rgba(179, 80, 71, 0.5) 270deg 315deg, transparent 315deg);
+            .round
+                width 480px
+                height 480px
+                background transparent
+                @media (max-width:520px) 
+                    width 312px
+                    height 312px
+                .round
+                    width 440px
+                    height 440px
+                    transform: rotate(-30deg)
+                    background conic-gradient(from 0deg, rgba(179, 80, 71, 0.5) 0deg 45deg, transparent 45deg 90deg, rgba(225, 206, 203, 0.5) 90deg 135deg, transparent 135deg 180deg, rgba(66, 70, 109, 0.5) 180deg 225deg,transparent 225deg 270deg, rgba(191, 206, 206, 0.5) 270deg 315deg, transparent 315deg);
+                    @media (max-width:520px) 
+                        width 286px
+                        height 286px
+                    .round
+                        transform: rotate(30deg)
+                        width 400px
+                        height 400px
+                        background transparent
+                        @media (max-width:520px) 
+                            width 260px
+                            height 260px
+                        .round
+                            transform: rotate(0deg)
+                            width 362px
+                            height 362px
+                            background #FAFAFA
+                            padding 2px
+                            overflow hidden
+                            img
+                                width 70%
+                            @media (max-width:520px) 
+                                width 235px
+                                height 235px
+                            
+
+            @media (max-width:520px) 
+                width 340px
+                height 340px
+        .line
+            width 230px
+            height 4px
+            background #000
+            display flex
+            justify-content center
+            align-items center
+            margin 0 0 15px -50px
+            @media (max-width:520px) 
+                display none
+        p.donated
+            display flex
+            justify-content center
+            align-items center
+            font-style normal
+            font-weight normal
+            font-size 36px
+            line-height 42px
+            color #000000
+            margin 0 30px
+
+    .titleFundraising
+        text-decoration: none
+        width max-content
+        height 73px
+        padding 22px
+        background #85c3c3
+        font-style normal
+        font-weight normal
+        font-size 24px
+        line-height 28px
+        color: #000000
+        border-radius: 50px
+        &:hover
+            background #85c3c388
+    &:nth-child(2)
+        .titleFundraising
+            background-color: rgba(179, 80, 71, 0.5)
+            &:hover  
+                background-color: rgba(179, 80, 71, 0.70)  
+    &:nth-child(3)
+        .titleFundraising
+            background-color: rgba(66, 70, 109, 0.5)
+            &:hover  
+                background-color: rgba(66, 70, 109, 0.70)
+    &:nth-child(4)
+        .titleFundraising
+            background-color: rgba(206, 154, 152, 0.5)
+            &:hover  
+                background-color: rgba(206, 154, 152, 0.70)        
+    &:nth-child(5)
+        .titleFundraising
+            background-color: rgba(225, 206, 203, 0.5)
+            &:hover  
+                background-color: rgba(225, 206, 203, 0.70)
+    &:nth-child(6)
+        .titleFundraising
+            background-color: rgba(191, 206, 206, 0.5)
+            &:hover  
+                background-color: rgba(191, 206, 206, 0.70)
+    &:nth-child(7)
+        .titleFundraising
+            background-color: rgba(179, 80, 71, 0.5)
+            &:hover  
+                background-color: rgba(179, 80, 71, 0.70)
+    &:nth-child(8)
+        .titleFundraising
+            background-color: #42466D88
+            &:hover  
+                background-color: #42466D46
+    .descript
+        width 90%
+        // background #ccc
+        margin 25px
+        font-size 18px
+        padding 10px
+        border-radius 10px

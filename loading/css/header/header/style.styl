@@ -1,0 +1,84 @@
+.header5-custom
+    margin-top: 70px
+    width 100vw
+    height 100vh
+    background-color: gold
+    .bg-img
+        width 100%
+        position absolute
+        height 80%
+        bottom 0
+        .left
+        .right
+            position absolute
+            width 640px 
+            height: 100%
+            @media screen and (max-width: 745px)
+                display none    
+        .left 
+            left:10px
+            background url('../images/mainblock/mortal-kombat-transparent-1.png')
+            background-size: cover
+            
+            &::before
+                content '' 
+                background: url('../images/mainblock/left-before.png')
+                width 300px
+                height 200px
+                top: 0px
+        .right
+            right 10px
+            background url('../images/mainblock/favpng_deus-ex-human-revolution-deus-ex-mankind-divided-deus-ex-invisible-war-xbox-360.png') 
+            background-size cover
+    .basic-content
+        font-weight: bold
+        position absolute
+        transform:translate(-50%, -50%);
+        left 50%
+        top 50%
+        width 800px
+        height auto
+        background none
+        text-align: center
+        .logo
+            position relative
+            width 300px
+            height: 180px
+            margin: 0 auto
+            
+            img 
+                margin 0 auto
+                width 150px
+                height: 150px
+            p 
+                text-align: center
+                font-size: 30pt
+                font-family impact 
+                text-transform: uppercase
+                color gold
+                background url('../images/mainblock/title-bg.png') no-repeat
+                background-size: cover
+        .title
+            width 100%
+            font-size: 90px
+            font-family impact 
+            text-transform: uppercase
+            color #171c4e
+            @media screen and (max-width: 800px)
+                font-size 45px
+        .workTime
+            width 100%
+
+            font-family impact 
+            text-align center
+            font-size 34pt
+            @media screen and (max-width: 800px)
+                font-size 17px
+           
+        @media screen and (max-width: 800px)
+            width 90%
+            // .link-modal
+                // display none
+        @media (min-width: 800px)
+            .link-phone
+                display none
